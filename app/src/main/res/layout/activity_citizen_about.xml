@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/drawerLayout"
+    tools:context=".CitizenHome">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="730dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/activity_citizen_about_toolbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="About Us"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/pink"
+            android:textSize="25sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="590dp"
+            android:layout_margin="20dp"
+            android:background="@color/lightblack"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightblack"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/brgylogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/poppins"
+                android:text="Barangay Nangka"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="180dp"
+                android:fontFamily="@font/poppins"
+                android:text="Health Center"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="230dp"
+                android:fontFamily="@font/poppins"
+                android:text="Vision:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="260dp"
+                android:fontFamily="@font/poppins"
+                android:text="An ECONOMIC ICON of Marikina a showcase of self-sufficient community endowed with industrious, well-disciplined, articulate and highly-competent people, and who are at part with the world's best.                       "
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="370dp"
+                android:fontFamily="@font/poppins"
+                android:text="Mission:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="400dp"
+                android:fontFamily="@font/poppins"
+                android:text="Barangay Nangka aims at coming up as one of the major contributors of the City of Marikina's thrust to gain worldwide recognition as the 'Little Singapore' by creating itself into a community which is economically sufficient and with the people not only living well-off but more importantly, competitive in all aspects with anybody in the world.                                                   "
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="History"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/pink"
+            android:textSize="25sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="590dp"
+            android:layout_margin="20dp"
+            android:background="@android:color/transparent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightblack"/>
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="The Barangay Nangka is situated at the northernmost portion of the city of Marikina along the concrete highway leading to the towns of San Mateo and Montalban (Rizal). It is six (6) kilometers away from the city proper and used to be the most rural of the 14 barangays of this city. It was established with the settlement of two (2) families. The place has been known as Nangka from the very beginning due to the presence of langka (jackfruit) trees that used to grow in abundance along the pass used by both man and his beasts (the carabao) leading to the river.            "
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="290dp"
+                android:fontFamily="@font/poppins"
+                android:text="This has become its official name up to the present. However, it is likewise perceive that this name was derived from the rivers name that devides Marikina and San mateo, aptly called Nangka River, but obviously by reason of abundance of langka trees which used to line up the banks of the river. Nangka officially came into existence as a barrio pursuant to Republic Act No. 2601 (section 2), an Act creating barrios in certain municipalities in the province of Rizal enact by the Philippine Congress, on June 21, 1959 (where upon sitio Nangka was converted into a barrio in the Municipality of Marikina, province of Rizal)."
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        tools:ignore="MissingConstraints">
+
+        <include
+            layout="@layout/activity_citizen_nav_drawer"/>
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

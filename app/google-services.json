@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "67215677131",
+    "firebase_url": "https://brgy-nangka-health-center-default-rtdb.firebaseio.com",
+    "project_id": "brgy-nangka-health-center",
+    "storage_bucket": "brgy-nangka-health-center.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67215677131:android:1f829a850e6f18359b6d4e",
+        "android_client_info": {
+          "package_name": "com.example.brgynangkahealthcenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67215677131-gpag711knsg2lg2cosv716pcldsl72f0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brgynangkahealthcenter",
+            "certificate_hash": "3196d876baea7e2bb194f4cc8b6f700ddea87921"
+          }
+        },
+        {
+          "client_id": "67215677131-qgjlroeopfmd7sk2ft4j7qo9aeco2hin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7OkeCAthOeOevNj7vFt-mX17FX7s28W8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67215677131-qgjlroeopfmd7sk2ft4j7qo9aeco2hin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

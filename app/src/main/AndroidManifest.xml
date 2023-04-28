@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/kalingawhite_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BrgyNangkaHealthCenter"
+        tools:targetApi="31">
+        <activity
+            android:name=".Citizen_Profile_Item3"
+            android:exported="false" />
+        <activity
+            android:name=".Citizen_Profile_Item2"
+            android:exported="false" />
+        <activity
+            android:name=".Citizen_Profile_Item"
+            android:exported="false" />
+        <activity
+            android:name=".Nurse_QR_Generator"
+            android:exported="false" />
+        <activity
+            android:name=".Nurse_QR_Scanner"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorProfile"
+            android:exported="false"
+            android:parentActivityName=".DoctorHome" />
+        <activity
+            android:name=".DoctorRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorInventory"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorUsers"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorPrescription"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorConsultation"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHome"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".NurseProfile"
+            android:exported="false"
+            android:parentActivityName=".NurseHome" />
+        <activity
+            android:name=".NursePreConsultation"
+            android:exported="false" />
+        <activity
+            android:name=".NurseInventory"
+            android:exported="false" />
+        <activity
+            android:name=".NurseUsers"
+            android:exported="false" />
+        <activity
+            android:name=".NurseDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".NurseHome"
+            android:exported="false" />
+        <activity
+            android:name=".NurseRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenProfile"
+            android:exported="false"
+            android:parentActivityName=".CitizenHome" />
+        <activity
+            android:name=".CitizenPrescription"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenAbout"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenQueuing"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenNotification"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenHome"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenLogin"
+            android:exported="false" />
+        <activity
+            android:name=".CitizenRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".NurseLogin"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorLogin"
+            android:exported="false" />
+        <activity
+            android:name=".LandingPage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
