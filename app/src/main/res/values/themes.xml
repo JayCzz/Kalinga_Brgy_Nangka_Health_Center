@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BrgyNangkaHealthCenter" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryVariant">@color/pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+    
+    //Theme Mode
+    <style name="ScreenBackground"><item name="android:background">@color/lightwhite</item></style>
+    <style name="CardBackground"><item name="android:background">@color/white</item></style>
+    <style name="TexColor"><item name="android:textColor">@color/black</item></style>
+    <style name="BtnTexColor"><item name="android:textColor">@color/white</item></style>
+
+    //Image Button
+    <style name="ImgButton"><item name="android:background">@color/pink</item></style>
+
+    //SearchBar
+    <style name="CardBackground2"><item name="android:background">@color/lightwhite</item></style>
+    <style name="CardBackground3"><item name="android:background">@color/white</item></style>
+
+</resources>

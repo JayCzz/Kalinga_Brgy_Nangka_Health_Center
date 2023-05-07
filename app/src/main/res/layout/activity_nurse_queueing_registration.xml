@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScreenBackground"
+    android:id="@+id/drawerLayout"
+    tools:context=".NurseQueueingRegistration">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/activity_nurse_family_list_toolbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queueing Registration"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            style="@style/TexColor"
+            android:fontFamily="@font/poppins"/>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="670dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edittext"
+            style="@style/ScreenBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get A Queue Number Here!"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                style="@style/TexColor"
+                android:fontFamily="@font/poppins"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_margin="8dp"
+                android:id="@+id/searchView"
+                android:background="@drawable/grey_background"
+                app:queryHint="Search Family Number"
+                app:iconifiedByDefault="false"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/pink"
+                android:padding="8dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        style="@style/TexColor"
+                        android:text="QR Code"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="ID Number"
+                        style="@style/TexColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/activity_nurse_family_list_items" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        tools:ignore="MissingConstraints">
+
+        <include
+            layout="@layout/activity_nurse_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
