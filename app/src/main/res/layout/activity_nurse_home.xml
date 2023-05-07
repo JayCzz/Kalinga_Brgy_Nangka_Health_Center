@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
+    style="@style/ScreenBackground"
     tools:context=".NurseHome">
 
 
@@ -31,18 +32,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CALENDAR"
-
             android:textSize="20sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
+            style="@style/TexColor"
             android:fontFamily="@font/poppins"/>
 
         <View
-            android:layout_width="380dp"
+            android:layout_width="320dp"
             android:layout_height="1dp"
             android:layout_gravity="center"
-
             android:background="@color/pink" />
 
 
@@ -63,7 +62,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="500dp"
-                    android:background="@color/lightwhite"
+                    style="@style/CardBackground"
                     android:orientation="vertical"
                     android:gravity="center">
 
@@ -73,7 +72,6 @@
                         android:layout_gravity="center"
                         android:text="Weekly"
                         style="@style/TexColor"
-                        android:textColor="@color/black"
                         android:background="?android:attr/selectableItemBackground"
                         android:textStyle="bold"
                         android:onClick="weeklyAction"
@@ -90,8 +88,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/back"
-
-                            android:textColor="@color/black"
+                            style="@style/TexColor"
                             android:background="?android:attr/selectableItemBackground"
                             android:textStyle="bold"
                             android:onClick="previousMonthAction"
@@ -103,18 +100,17 @@
                             android:layout_weight="2"
                             android:layout_height="wrap_content"
                             android:text="June 2023"
+                            style="@style/TexColor"
                             android:fontFamily="@font/poppins"
                             android:textSize="20sp"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"/>
+                            android:textAlignment="center"/>
 
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/next"
-
-                            android:textColor="@color/black"
+                            style="@style/TexColor"
                             android:background="?android:attr/selectableItemBackground"
                             android:textStyle="bold"
                             android:onClick="nextMonthAction"
@@ -133,7 +129,7 @@
                             android:layout_weight="1"
                             android:text="SUN"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -143,7 +139,7 @@
                             android:layout_weight="1"
                             android:text="MON"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -153,7 +149,7 @@
                             android:layout_weight="1"
                             android:text="TUE"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -163,7 +159,7 @@
                             android:layout_weight="1"
                             android:text="WED"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -173,7 +169,7 @@
                             android:layout_weight="1"
                             android:text="THUR"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -183,7 +179,7 @@
                             android:layout_weight="1"
                             android:text="FRI"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -193,7 +189,7 @@
                             android:layout_weight="1"
                             android:text="SAT"
                             android:fontFamily="@font/poppins"
-                            android:textColor="@color/lightblack"
+                            style="@style/TexColor"
                             android:textAlignment="center"
                             android:textSize="16sp"/>
 
@@ -202,6 +198,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/calendarRecyclerView"
                         android:layout_width="match_parent"
+                        style="@style/CardBackground"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="10dp"/>
 
@@ -219,10 +216,10 @@
             android:textSize="20sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"/>
+            style="@style/TexColor"/>
 
         <View
-            android:layout_width="380dp"
+            android:layout_width="320dp"
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:background="@color/pink" />
@@ -256,7 +253,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:orientation="vertical"
                             android:gravity="center">
 
@@ -269,6 +266,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="QR Code List" />
 
 
@@ -277,6 +275,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="View List"
                                 android:textSize="12sp"/>
 
@@ -310,7 +309,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:gravity="center">
@@ -324,6 +323,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="QR Generator" />
 
 
@@ -333,6 +333,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="Open QR Generator"
                                 android:textSize="12sp"/>
 
@@ -377,7 +378,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:gravity="center"
                             android:orientation="vertical">
 
@@ -390,6 +391,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="QR Code Scanner" />
 
 
@@ -398,6 +400,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="Open QR Scanner"
                                 android:textSize="12sp" />
 
@@ -415,17 +418,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="QUEUEING MENU"
-
             android:fontFamily="@font/poppins"
             android:textSize="20sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/pink"/>
+            style="@style/TexColor"/>
 
         <View
-            android:layout_width="380dp"
+            android:layout_width="320dp"
             android:layout_height="1dp"
-
             android:layout_gravity="center"
             android:background="@color/pink" />
 
@@ -458,7 +459,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:orientation="vertical"
                             android:gravity="center">
 
@@ -471,6 +472,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="Live Queuing" />
 
 
@@ -479,6 +481,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="View Live"
                                 android:textSize="12sp"/>
 
@@ -513,7 +516,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:orientation="vertical"
                             android:gravity="center">
 
@@ -526,14 +529,17 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="Queuing Registration" />
 
 
 
                             <Button
+                                android:id="@+id/queueingRegistration"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="Register"
                                 android:textSize="12sp"/>
 
@@ -579,7 +585,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/lightwhite"
+                            style="@style/CardBackground"
                             android:orientation="vertical"
                             android:gravity="center">
 
@@ -592,6 +598,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                style="@style/TexColor"
                                 android:text="Counter" />
 
 
@@ -600,6 +607,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/pink"
+                                style="@style/BtnTexColor"
                                 android:text="Open Counter"
                                 android:textSize="12sp"/>
 

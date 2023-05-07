@@ -1,11 +1,15 @@
 package com.example.brgynangkahealthcenter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -19,10 +23,17 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class DoctorPrescription extends AppCompatActivity {
 
+    //NAV DRAWER
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, consultation, prescription, users, inventory, exit;
-    Button viewProfile;
+    Button viewProfile, addPrescription;
+
+    //SWITCH MODE
+    SwitchCompat switchMode;
+    boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +43,14 @@ public class DoctorPrescription extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_doctor_prescription);
 
-        viewProfile = findViewById(R.id.viewProfile);
+        //prescription_btn
+        addPrescription = findViewById(R.id.addPrescription);
 
+        //Drawer
         drawerLayout = findViewById(R.id.drawerLayout);
+        //view Profile
+        viewProfile = findViewById(R.id.viewProfile);
+        //Nav Bar
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
         dashboard = findViewById(R.id.dashboard);
@@ -44,6 +60,39 @@ public class DoctorPrescription extends AppCompatActivity {
         inventory = findViewById(R.id.inventory);
         exit = findViewById(R.id.exit);
 
+        addPrescription.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorPrescription.this, DoctorPrescriptionForm.class); startActivity(i);}
+        });
+
+
+        //SWITCH MODE
+        switchMode = findViewById(R.id.switchMode);
+
+        sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMode = sharedPreferences.getBoolean("nightMode", false);
+
+        if (nightMode){
+            switchMode.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
+        switchMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (nightMode){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", true);
+                }
+                editor.apply();
+            }
+        });
+
+        //Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(DoctorPrescription.this, DoctorProfile.class); startActivity(i);}
         });

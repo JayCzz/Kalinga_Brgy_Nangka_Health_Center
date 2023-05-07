@@ -13,4 +13,18 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    //Theme Mode
+    <style name="ScreenBackground"><item name="android:background">@color/lightblack</item></style>
+    <style name="CardBackground"><item name="android:background">@color/lightgray</item></style>
+    <style name="TexColor"><item name="android:textColor">@color/white</item></style>
+    <style name="BtnTexColor"><item name="android:textColor">@color/white</item></style>
+
+    //Image Button
+    <style name="ImgButton"><item name="android:background">@color/lightgray</item></style>
+
+    //SearchBar
+    <style name="CardBackground2"><item name="android:background">@color/light_gray</item></style>
+    <style name="CardBackground3"><item name="android:background">@color/lightgray</item></style>
 </resources>

@@ -15,6 +15,33 @@
         android:theme="@style/Theme.BrgyNangkaHealthCenter"
         tools:targetApi="31">
         <activity
+            android:name=".NurseQueueingRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor_QR_Scan"
+            android:exported="false" />
+        <activity
+            android:name=".NurseFamilyList"
+            android:exported="false" />
+        <activity
+            android:name=".NurseProfileItem3"
+            android:exported="false" />
+        <activity
+            android:name=".NurseProfileItem2"
+            android:exported="false" />
+        <activity
+            android:name=".NurseProfileItem"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorConsultationForm"
+            android:exported="false" />
+        <activity
+            android:name=".NursePreConsultationViewRecords"
+            android:exported="false" />
+        <activity
+            android:name=".NursePreConsultationUpdateRecord"
+            android:exported="false" />
+        <activity
             android:name=".Citizen_Profile_Item3"
             android:exported="false" />
         <activity
@@ -46,7 +73,13 @@
             android:name=".DoctorPrescription"
             android:exported="false" />
         <activity
+            android:name=".DoctorPrescriptionForm"
+            android:exported="false" />
+        <activity
             android:name=".DoctorConsultation"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorConsultationForm"
             android:exported="false" />
         <activity
             android:name=".DoctorHome"
@@ -61,6 +94,14 @@
         <activity
             android:name=".NursePreConsultation"
             android:exported="false" />
+        <activity
+            android:name=".NursePreConsultationUpdateRecord"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".NursePreConsultationViewRecords"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".NurseInventory"
             android:exported="false" />

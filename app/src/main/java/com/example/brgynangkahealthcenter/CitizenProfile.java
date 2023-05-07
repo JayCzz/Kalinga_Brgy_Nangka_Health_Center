@@ -19,8 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class CitizenProfile extends AppCompatActivity {
 
-    TextView ProfileFirstname, ProfileLastname, ProfileBirthday, ProfileAge, ProfileSex, ProfileEmail, ProfilePhone, ProfileUsername, ProfilePassword;
-    TextView titleName, titlebrgyId;
 
     DatabaseReference databaseReference;
 
@@ -28,24 +26,9 @@ public class CitizenProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen_profile);
-
-        getSupportActionBar().setTitle("Kalinga | Profile");
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
+        getSupportActionBar().hide();
 
-        titleName = findViewById(R.id.titleName);
-        titlebrgyId = findViewById(R.id.titlebrgyId);
-
-        ProfileFirstname = findViewById(R.id.userFirstname);
-        ProfileLastname = findViewById(R.id.userLastname);
-        ProfileBirthday = findViewById(R.id.userBirthday);
-        ProfileAge = findViewById(R.id.userAge);
-        ProfileSex = findViewById(R.id.userSex);
-        ProfileEmail = findViewById(R.id.userEmail);
-        ProfilePhone = findViewById(R.id.userPhone);
-        ProfileUsername = findViewById(R.id.userName);
-        ProfilePassword = findViewById(R.id.userPassword);
 
         // initialize Firebase database reference
         FirebaseDatabase database = FirebaseDatabase.getInstance();

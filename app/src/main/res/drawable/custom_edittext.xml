@@ -6,6 +6,6 @@
         android:width="3dp"
         android:color="@color/pink"/>
     <corners
-        android:radius="20dp"/>
+        android:radius="10dp"/>
 
 </shape>

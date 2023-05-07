@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblack"
+    style="@style/ScreenBackground"
     tools:context=".LandingPage">
 
 
@@ -29,7 +29,24 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kalingalogowhite" />
+        app:srcCompat="@drawable/kalingalogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="152dp"
+        android:fontFamily="@font/poppins"
+        android:text="Kalinga"
+        android:textColor="@color/pink"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.274" />
 
     <TextView
         android:id="@+id/textView2"
@@ -37,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginEnd="152dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins"
         android:text="LOGIN AS"
         android:textColor="@color/pink"
@@ -51,10 +69,10 @@
         android:id="@+id/Doctor"
         android:layout_width="236dp"
         android:layout_height="65dp"
-
-        android:backgroundTint="#F67280"
+        android:backgroundTint="@color/pink"
         android:drawableLeft="@drawable/icon_doctor"
         android:fontFamily="@font/poppins"
+        style="@style/BtnTexColor"
         android:text="Doctor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -66,9 +84,10 @@
         android:layout_width="236dp"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#F67280"
+        android:backgroundTint="@color/pink"
         android:drawableLeft="@drawable/icon_nurse"
         android:fontFamily="@font/poppins"
+        style="@style/BtnTexColor"
         android:text="Nurse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -81,9 +100,10 @@
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="184dp"
-        android:backgroundTint="#F67280"
+        android:backgroundTint="@color/pink"
         android:drawableLeft="@drawable/icon_citizen"
         android:fontFamily="@font/poppins"
+        style="@style/BtnTexColor"
         android:text="Citizen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +115,7 @@
     <ImageView
         android:layout_width="500dp"
         android:layout_height="170dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/wavedown"
         app:layout_constraintTop_toTopOf="@id/Citizen"

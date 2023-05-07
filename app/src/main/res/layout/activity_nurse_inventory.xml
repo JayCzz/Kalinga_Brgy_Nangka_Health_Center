@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
+    style="@style/ScreenBackground"
     tools:context=".NurseHome">
 
 
@@ -23,9 +24,8 @@
             android:layout_height="670dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-
-
-            android:background="@drawable/white_background"
+            android:background="@drawable/custom_edittext"
+            style="@style/ScreenBackground"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.SearchView
@@ -34,7 +34,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_margin="8dp"
                 android:id="@+id/searchView"
-                android:background="@drawable/white_background"/>
+                android:background="@drawable/grey_background"
+                app:queryHint="Search Medicine"
+                app:iconifiedByDefault="false"/>
 
 
             <LinearLayout
@@ -55,7 +57,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Name"
-                        android:textColor="@color/black"
+                        style="@style/TexColor"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -66,7 +68,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Category"
-                        android:textColor="@color/black"
+                        style="@style/TexColor"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -77,7 +79,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Stock"
-                        android:textColor="@color/black"
+                        style="@style/TexColor"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 

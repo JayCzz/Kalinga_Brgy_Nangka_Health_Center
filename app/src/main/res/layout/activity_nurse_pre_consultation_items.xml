@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NursePreConsultation">
 
     <LinearLayout
         android:id="@+id/linearlayout"
@@ -19,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
-            android:background="@color/lightwhite">
+            style="@style/CardBackground2">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -33,7 +35,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="FN-01001"
-                    android:textColor="@color/black"
+                    style="@style/TexColor"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -46,7 +48,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Natsu Dragneel"
-                    android:textColor="@color/black"
+                    style="@style/TexColor"
                     android:textSize="15sp"
                     />
 
@@ -59,12 +61,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            style="@style/CardBackground3"
             android:gravity="center">
 
             <Button
+                android:id="@+id/viewRecord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
+                style="@style/BtnTexColor"
                 android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
                 android:text="View Records" />
@@ -83,7 +88,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
-            android:background="@color/lightwhite">
+            style="@style/CardBackground2">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -97,7 +102,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="FN-01001"
-                    android:textColor="@color/black"
+                    style="@style/TexColor"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -110,7 +115,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Natsu Dragneel"
-                    android:textColor="@color/black"
+                    style="@style/TexColor"
                     android:textSize="15sp"
                     />
 
@@ -123,6 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            style="@style/CardBackground3"
             android:gravity="center">
 
             <Button
@@ -131,6 +137,7 @@
                 android:backgroundTint="@color/green"
                 android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
+                style="@style/BtnTexColor"
                 android:text="View Records" />
 
         </LinearLayout>
@@ -138,6 +145,7 @@
         <View
             android:layout_width="380dp"
             android:layout_height="1dp"
+            style="@style/BtnTexColor"
             android:layout_gravity="center"
             android:background="@color/pink" />
 

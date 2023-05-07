@@ -1,12 +1,16 @@
 package com.example.brgynangkahealthcenter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -24,6 +28,13 @@ public class DoctorUsers extends AppCompatActivity {
     ImageView menu;
     LinearLayout home, dashboard, consultation, prescription, users, inventory, exit;
     Button viewProfile;
+
+    //SWITCH MODE
+    SwitchCompat switchMode;
+    boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -46,6 +57,34 @@ public class DoctorUsers extends AppCompatActivity {
         inventory = findViewById(R.id.inventory);
         exit = findViewById(R.id.exit);
 
+        //SWITCH MODE
+        switchMode = findViewById(R.id.switchMode);
+
+        sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMode = sharedPreferences.getBoolean("nightMode", false);
+
+        if (nightMode){
+            switchMode.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
+        switchMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (nightMode){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", true);
+                }
+                editor.apply();
+            }
+        });
+
+        //Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(DoctorUsers.this, DoctorProfile.class); startActivity(i);}
         });

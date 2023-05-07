@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     android:id="@+id/drawerLayout"
+    style="@style/ScreenBackground"
     tools:context=".NurseHome">
 
         <LinearLayout
@@ -21,11 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
             <LinearLayout
@@ -55,12 +54,14 @@
                             android:elevation="55dp"
                             android:layout_centerHorizontal="true"
                             android:padding="5dp"
-                            android:src="@drawable/kalinga_logo_white" />
+                            android:src="@drawable/kalinga_logo_white"
+                            />
 
 
                         <androidx.cardview.widget.CardView
                             android:layout_marginTop="40dp"
                             android:layout_width="match_parent"
+                            style="@style/CardBackground"
                             android:layout_height="180dp"
                             android:elevation="0dp"
                             app:cardCornerRadius="10dp">
@@ -69,6 +70,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                style="@style/CardBackground"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
@@ -78,7 +80,7 @@
                                     android:layout_marginTop="50dp"
                                     android:fontFamily="@font/poppins"
                                     android:text="Welcome!"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="20dp"
                                     android:textStyle="bold" />
 
@@ -86,6 +88,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="JayC Espina"
+                                    style="@style/TexColor"
                                     android:textSize="16dp" />
 
 
@@ -94,6 +97,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
+                                    style="@style/BtnTexColor"
                                     android:text="View Profile"
                                     android:textSize="12sp" />
 
@@ -137,6 +141,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
+                                style="@style/CardBackground"
                                 android:gravity="center">
 
                                 <TextView
@@ -144,7 +149,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Total Families"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="16sp"
                                     android:textStyle="bold"/>
 
@@ -160,18 +165,19 @@
                                     android:layout_marginBottom="15dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    style="@style/TexColor"
                                     android:text="52"
                                     android:textSize="25sp"
                                     android:textStyle="bold"/>
-
 
 
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
+                                    style="@style/BtnTexColor"
                                     android:text="View Family List"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp" />
 
                             </LinearLayout>
 
@@ -193,6 +199,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/CardBackground"
                         android:elevation="0dp"
                         app:cardCornerRadius="10dp">
 
@@ -205,6 +212,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
+                                style="@style/CardBackground"
                                 android:gravity="center">
 
                                 <TextView
@@ -212,7 +220,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Total Users"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="16sp"
                                     android:textStyle="bold"/>
 
@@ -229,6 +237,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10"
+                                    style="@style/TexColor"
                                     android:textSize="25sp"
                                     android:textStyle="bold"/>
 
@@ -238,6 +247,7 @@
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
                                     android:text="View Users List"
+                                    style="@style/BtnTexColor"
                                     android:textSize="12sp"/>
 
                             </LinearLayout>
@@ -268,6 +278,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/CardBackground"
                         android:elevation="0dp"
                         app:cardCornerRadius="10dp">
 
@@ -280,6 +291,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
+                                style="@style/CardBackground"
                                 android:gravity="center">
 
                                 <TextView
@@ -287,7 +299,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Total Admins"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="16sp"
                                     android:textStyle="bold"/>
 
@@ -304,6 +316,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="5"
+                                    style="@style/TexColor"
                                     android:textSize="25sp"
                                     android:textStyle="bold"/>
 
@@ -313,6 +326,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
+                                    style="@style/BtnTexColor"
                                     android:text="View Admins List"
                                     android:textSize="12sp"/>
 
@@ -336,6 +350,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/CardBackground"
                         android:elevation="0dp"
                         app:cardCornerRadius="10dp">
 
@@ -348,6 +363,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
+                                style="@style/CardBackground"
                                 android:gravity="center">
 
                                 <TextView
@@ -355,7 +371,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Total Doctors"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="16sp"
                                     android:textStyle="bold"/>
 
@@ -363,6 +379,7 @@
                                     android:layout_marginTop="5dp"
                                     android:layout_width="130dp"
                                     android:layout_height="1dp"
+                                    style="@style/TexColor"
                                     android:layout_gravity="center"
                                     android:background="@color/pink" />
 
@@ -372,6 +389,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="3"
+                                    style="@style/TexColor"
                                     android:textSize="25sp"
                                     android:textStyle="bold"/>
 
@@ -382,6 +400,7 @@
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
                                     android:text="View Doctors List"
+                                    style="@style/BtnTexColor"
                                     android:textSize="12sp"/>
 
                             </LinearLayout>
@@ -413,6 +432,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/CardBackground"
                         android:elevation="0dp"
                         app:cardCornerRadius="10dp">
 
@@ -424,6 +444,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                style="@style/CardBackground"
                                 android:orientation="vertical"
                                 android:gravity="center">
 
@@ -432,7 +453,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Total Nurses"
-                                    android:textColor="@color/black"
+                                    style="@style/TexColor"
                                     android:textSize="16sp"
                                     android:textStyle="bold"/>
 
@@ -448,6 +469,7 @@
                                     android:layout_marginBottom="15dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    style="@style/TexColor"
                                     android:text="7"
                                     android:textSize="25sp"
                                     android:textStyle="bold"/>
@@ -459,6 +481,7 @@
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
                                     android:text="View Nurses List"
+                                    style="@style/BtnTexColor"
                                     android:textSize="12sp"/>
 
                             </LinearLayout>
@@ -472,7 +495,7 @@
 
             </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 

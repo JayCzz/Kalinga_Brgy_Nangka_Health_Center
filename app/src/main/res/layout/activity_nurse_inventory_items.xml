@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        style="@style/CardBackground2"
         android:padding="8dp">
 
         <TableRow
@@ -35,7 +36,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Adderall"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -48,7 +49,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Uknown"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp"
                 />
 
@@ -61,7 +62,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="20 pcs"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp" />
 
         </TableRow>
@@ -75,10 +76,559 @@
         android:layout_gravity="center"
         android:background="@color/pink" />
 
-    <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/CardBackground2"
+            android:padding="8dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Adderall"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Uknown"
+                    style="@style/TexColor"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="20 pcs"
+                    style="@style/TexColor"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/pink" />
+
+
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        style="@style/CardBackground2"
         android:padding="8dp">
 
         <TableRow
@@ -94,7 +644,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Amoxicillin"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -107,7 +657,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Uknown"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp" />
 
             <TextView
@@ -119,7 +669,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="10 pcs"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp" />
 
         </TableRow>
@@ -137,6 +687,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        style="@style/CardBackground2"
         android:padding="8dp">
 
         <TableRow
@@ -152,7 +703,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Brilinta"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -165,7 +716,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Uknown"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp"
                 />
 
@@ -178,7 +729,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="30 pcs"
-                android:textColor="@color/black"
+                style="@style/TexColor"
                 android:textSize="15sp" />
 
         </TableRow>
@@ -192,527 +743,6 @@
         android:layout_gravity="center"
         android:background="@color/pink" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Buprenorphine"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="60 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Ciprofloxacin"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="50 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Doxycycline"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="30 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Dupixent"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="40 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Entresto"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="30 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Entyvio"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="30 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Gilenya"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="60 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Fentanyl Patch"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="80 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:background="@color/pink" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Gilenya"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Uknown"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="60 pcs"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-
-        </TableRow>
-
-
-    </LinearLayout>
 
     </LinearLayout>
 

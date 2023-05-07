@@ -19,7 +19,7 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/pink"
+            style="@style/ImgButton"
             android:contentDescription="Personal Info"
             android:scaleType="fitCenter"
             android:src="@drawable/personal_information_white"

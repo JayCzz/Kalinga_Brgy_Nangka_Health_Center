@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblack"
+    style="@style/ScreenBackground"
     tools:context=".MainActivity">
 
     <ImageView
@@ -16,27 +16,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/beatingheart"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="53dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/beating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:text="Kalinga"
+        android:textSize="45dp"
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kalingalogowhite" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:layout_width="500dp"
         android:layout_height="170dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="560dp"
         android:scaleType="centerCrop"
         android:src="@drawable/wavedown"
-        app:layout_constraintTop_toTopOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="560dp" />
