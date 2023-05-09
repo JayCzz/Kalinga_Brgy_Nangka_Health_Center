@@ -26,13 +26,14 @@ public class NurseDashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button viewProfile, viewprofile, listfamily;
+    Button viewProfile, viewprofile, listfamily, viewUsers;
 
     //SWITCH MODE
     SwitchCompat switchMode;
     boolean nightMode;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,11 @@ public class NurseDashboard extends AppCompatActivity {
         listfamily = findViewById(R.id.familyLists);
         listfamily.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseFamilyList .class); startActivity(i);}
+        });
+
+        viewUsers = findViewById(R.id.viewUsers);
+        viewUsers.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseUsers .class); startActivity(i);}
         });
 
 
@@ -91,12 +97,12 @@ public class NurseDashboard extends AppCompatActivity {
         });
 
         viewprofile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseProfilePi.class); startActivity(i);}
         });
 
         // Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseProfilePi.class); startActivity(i);}
         });
 
 

@@ -84,7 +84,7 @@ public class NurseUsers extends AppCompatActivity {
 
         //Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseUsers.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseUsers.this, NurseProfilePi.class); startActivity(i);}
         });
 
         menu.setOnClickListener(new View.OnClickListener() {

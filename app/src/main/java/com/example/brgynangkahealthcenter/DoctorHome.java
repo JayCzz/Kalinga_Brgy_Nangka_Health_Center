@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -37,8 +38,11 @@ public class DoctorHome extends AppCompatActivity {
     boolean nightMode;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    //HOME MODULES
+    Button scan_button, consultationForm, queueRegister, prescriptionForm, queuingMonitoring;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +64,31 @@ public class DoctorHome extends AppCompatActivity {
         users = findViewById(R.id.users);
         inventory = findViewById(R.id.inventory);
         exit = findViewById(R.id.exit);
+
+        //HOME MODULE
+
+        consultationForm = findViewById(R.id.consultationForm);
+        consultationForm.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorHome.this, DoctorConsultationForm.class); startActivity(i);}
+        });
+
+        prescriptionForm = findViewById(R.id.prescriptionForm);
+        prescriptionForm.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorHome.this, DoctorPrescriptionForm.class); startActivity(i);}
+        });
+
+        //QUEUING MONITORING
+        queuingMonitoring = findViewById(R.id.queuingMonitor);
+        queuingMonitoring.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorHome.this, DoctorHomeQueuingMonitor.class); startActivity(i);}
+        });
+
+        //QUEUING Registration
+
+        queueRegister = findViewById(R.id.queueRegister);
+        queueRegister.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorHome.this, DoctorHomeQueuingRegistration.class); startActivity(i);}
+        });
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);

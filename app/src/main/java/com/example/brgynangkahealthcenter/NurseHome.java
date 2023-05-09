@@ -35,7 +35,10 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button viewProfile, scan_button, gen_button, queueRegister;
+    Button viewProfile;
+
+    //HOME MODULES
+    Button scan_button, gen_button, queueRegister, viewLists, queuingMonitoring;
 
     //CALENDAR
     private TextView monthYearText;
@@ -64,22 +67,17 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
         setMonthView();
 
         //DASHBOARD LIST DIRECTORY
+
+        //QUEUING MONITORING
+        queuingMonitoring = findViewById(R.id.queuingMonitor);
+        queuingMonitoring.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseHomeQueuingMonitor.class); startActivity(i);}
+        });
+        //QUEUING REGISTRATION
         queueRegister = findViewById(R.id.queueingRegistration);
         queueRegister.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseQueueingRegistration .class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseQueuingRegistration.class); startActivity(i);}
         });
-
-
-        viewProfile = findViewById(R.id.viewProfile);
-
-        drawerLayout = findViewById(R.id.drawerLayout);
-        menu = findViewById(R.id.menu);
-        home = findViewById(R.id.home);
-        dashboard = findViewById(R.id.dashboard);
-        users = findViewById(R.id.users);
-        inventory = findViewById(R.id.inventory);
-        contactUs = findViewById(R.id.contactUs);
-        exit = findViewById(R.id.exit);
 
         //QR Scanner
         scan_button = findViewById(R.id.scan_btn);
@@ -93,6 +91,28 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
             @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, Nurse_QR_Generator.class); startActivity(i);}
 
         });
+
+        viewLists = findViewById(R.id.viewList);
+        //VIEW LISTS
+        viewLists.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseQRList.class); startActivity(i);}
+
+        });
+
+
+
+
+        viewProfile = findViewById(R.id.viewProfile);
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        menu = findViewById(R.id.menu);
+        home = findViewById(R.id.home);
+        dashboard = findViewById(R.id.dashboard);
+        users = findViewById(R.id.users);
+        inventory = findViewById(R.id.inventory);
+        contactUs = findViewById(R.id.contactUs);
+        exit = findViewById(R.id.exit);
+
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);
@@ -123,7 +143,7 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
 
         //Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseProfilePi.class); startActivity(i);}
         });
 
         menu.setOnClickListener(new View.OnClickListener() {

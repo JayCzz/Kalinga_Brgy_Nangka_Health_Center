@@ -26,7 +26,7 @@ public class DoctorProfile extends AppCompatActivity {
     //NAV BAR
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, dashboard, consultation, prescription, users, inventory, exit;
+    LinearLayout home, dashboard, consultation, users, inventory, exit;
     Button viewProfile;
 
     //SWITCH MODE
@@ -144,6 +144,19 @@ public class DoctorProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //PROFILE ITEMS
+
+    public void opencitizen_profile_pi(View view) {
+        startActivity(new Intent(this,DoctorProfile.class));
+    }
+
+
+    public void opencitizen_profile_ai(View view) {
+        startActivity(new Intent(this,DoctorProfileAi.class));
+
 
     }
 

@@ -93,7 +93,7 @@
 
 
                                 <Button
-                                    android:id="@+id/profile_btn"
+                                    android:id="@+id/viewprofile"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
@@ -172,6 +172,7 @@
 
 
                                 <Button
+                                    android:id="@+id/familyLists"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
@@ -243,6 +244,7 @@
 
 
                                 <Button
+                                    android:id="@+id/viewUsers"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"

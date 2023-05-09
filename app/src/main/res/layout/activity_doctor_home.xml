@@ -90,6 +90,7 @@
 
 
                                         <Button
+                                            android:id="@+id/consultationForm"
                                             style="@style/BtnTexColor"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
@@ -146,6 +147,7 @@
 
 
                                         <Button
+                                            android:id="@+id/prescriptionForm"
                                             style="@style/BtnTexColor"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
@@ -354,10 +356,11 @@
 
 
                                         <Button
+                                            android:id="@+id/queuingMonitor"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:backgroundTint="@color/pink"
-                                            style="@style/TexColor"
+                                            style="@style/BtnTexColor"
                                             android:text="View Live"
                                             android:textSize="12sp" />
 
@@ -410,6 +413,7 @@
 
 
                                         <Button
+                                            android:id="@+id/queueRegister"
                                             style="@style/BtnTexColor"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"

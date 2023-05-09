@@ -75,23 +75,14 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/addPrescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                android:drawableLeft="@drawable/baseline_edit_24"
-                android:fontFamily="@font/poppins"
                 style="@style/BtnTexColor"
-                android:text="Edit" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@color/red"
-                android:drawableLeft="@drawable/baseline_delete_24"
+                android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
-                style="@style/BtnTexColor"
-                android:text="Delete" />
+                android:text="View Information" />
 
         </LinearLayout>
 
@@ -162,23 +153,14 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/addPrescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                android:drawableLeft="@drawable/baseline_edit_24"
-                android:fontFamily="@font/poppins"
                 style="@style/BtnTexColor"
-                android:text="Edit" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@color/red"
-                android:drawableLeft="@drawable/baseline_delete_24"
+                android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
-                style="@style/BtnTexColor"
-                android:text="Delete" />
+                android:text="View Information" />
 
         </LinearLayout>
 
@@ -249,23 +231,14 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/addPrescription"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                android:drawableLeft="@drawable/baseline_edit_24"
-                android:fontFamily="@font/poppins"
                 style="@style/BtnTexColor"
-                android:text="Edit" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@color/red"
-                android:drawableLeft="@drawable/baseline_delete_24"
+                android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
-                style="@style/BtnTexColor"
-                android:text="Delete" />
+                android:text="View Information" />
 
         </LinearLayout>
 
@@ -336,23 +309,14 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/addPrescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                android:drawableLeft="@drawable/baseline_edit_24"
                 style="@style/BtnTexColor"
+                android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
-                android:text="Edit" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@color/red"
-                android:drawableLeft="@drawable/baseline_delete_24"
-                android:fontFamily="@font/poppins"
-                style="@style/BtnTexColor"
-                android:text="Delete" />
+                android:text="View Information" />
 
         </LinearLayout>
 

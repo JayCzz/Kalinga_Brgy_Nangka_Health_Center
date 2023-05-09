@@ -15,22 +15,34 @@
         android:theme="@style/Theme.BrgyNangkaHealthCenter"
         tools:targetApi="31">
         <activity
-            android:name=".NurseQueueingRegistration"
+            android:name=".DoctorProfileAi"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDashboardFamilyList"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHomeQueuingRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHomeQueuingMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".NurseProfileAi"
+            android:exported="false" />
+        <activity
+            android:name=".NurseHomeQueuingMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".NurseQRList"
+            android:exported="false" />
+        <activity
+            android:name=".NurseQueuingRegistration"
             android:exported="false" />
         <activity
             android:name=".Doctor_QR_Scan"
             android:exported="false" />
         <activity
             android:name=".NurseFamilyList"
-            android:exported="false" />
-        <activity
-            android:name=".NurseProfileItem3"
-            android:exported="false" />
-        <activity
-            android:name=".NurseProfileItem2"
-            android:exported="false" />
-        <activity
-            android:name=".NurseProfileItem"
             android:exported="false" />
         <activity
             android:name=".DoctorConsultationForm"
@@ -88,7 +100,7 @@
             android:name=".DoctorDashboard"
             android:exported="false" />
         <activity
-            android:name=".NurseProfile"
+            android:name=".NurseProfilePi"
             android:exported="false"
             android:parentActivityName=".NurseHome" />
         <activity

@@ -34,6 +34,9 @@ public class DoctorDashboard extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
+    //DASH BOARD MODULE
+    Button viewprofile, listfamily, viewUsers;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,23 @@ public class DoctorDashboard extends AppCompatActivity {
         users = findViewById(R.id.users);
         inventory = findViewById(R.id.inventory);
         exit = findViewById(R.id.exit);
+
+        //DASHBOARD LIST DIRECTORY
+
+        viewprofile = findViewById(R.id.viewprofile);
+        viewprofile.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, DoctorProfile.class); startActivity(i);}
+        });
+
+        listfamily = findViewById(R.id.familyLists);
+        listfamily.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, DoctorDashboardFamilyList .class); startActivity(i);}
+        });
+
+        viewUsers = findViewById(R.id.viewUsers);
+        viewUsers.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, DoctorUsers .class); startActivity(i);}
+        });
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);

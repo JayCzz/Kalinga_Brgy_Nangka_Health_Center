@@ -6,27 +6,33 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class NursePreConsultation extends AppCompatActivity {
 
+public class NurseProfilePi extends AppCompatActivity {
+
+    //NAV BAR
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button viewProfile, viewRecord;
+    Button  viewProfile, viewprofile;
+
+    //PROFILE ITEMS
+    ImageButton preConsult;
 
     //SWITCH MODE
     SwitchCompat switchMode;
@@ -34,24 +40,20 @@ public class NursePreConsultation extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_nurse_profile_pi);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_nurse_pre_consultation);
-
-        //view Profile
-        viewProfile = findViewById(R.id.viewProfile);
-
-        //View Record
-        viewRecord = findViewById(R.id.viewRecord);
 
         //Drawer
         drawerLayout = findViewById(R.id.drawerLayout);
 
         //Nav Bar
+        //view Profile
+        viewProfile = findViewById(R.id.viewProfile);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
         dashboard = findViewById(R.id.dashboard);
@@ -60,11 +62,7 @@ public class NursePreConsultation extends AppCompatActivity {
         contactUs = findViewById(R.id.contactUs);
         exit = findViewById(R.id.exit);
 
-        //view Record
-        viewRecord.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NursePreConsultation.this,NursePreConsultationViewRecords.class); startActivity(i);}
 
-        });
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);
@@ -97,7 +95,7 @@ public class NursePreConsultation extends AppCompatActivity {
 
         //view Profile
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NursePreConsultation.this, NurseProfilePi.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseProfilePi.this, NurseProfilePi.class); startActivity(i);}
         });
 
         //Nav Bar
@@ -110,37 +108,37 @@ public class NursePreConsultation extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NursePreConsultation.this, NurseHome.class);
+                redirectActivity(NurseProfilePi.this, NurseHome.class);
             }
 
         });
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NursePreConsultation.this, NurseDashboard.class);
+                redirectActivity(NurseProfilePi.this, NurseDashboard.class);
             }
         });
         users.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                redirectActivity(NursePreConsultation.this, NurseUsers.class);
+                redirectActivity(NurseProfilePi.this, NurseUsers.class);
             }
         });
         inventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NursePreConsultation.this, NurseInventory.class);
+                redirectActivity(NurseProfilePi.this, NurseInventory.class);
             }
         });
         contactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                recreate();
+                redirectActivity(NurseProfilePi.this, NursePreConsultation.class);
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(NursePreConsultation.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NurseProfilePi.this, "Logout", Toast.LENGTH_SHORT).show();
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
@@ -152,7 +150,27 @@ public class NursePreConsultation extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
+
+    //PROFILE ITEMS
+
+    public void opencitizen_profile_pi(View view) {
+        startActivity(new Intent(this,NurseProfilePi.class));
+
+
+    }
+
+
+
+    public void opencitizen_profile_ai(View view) {
+        startActivity(new Intent(this,NurseProfileAi.class));
+
+
+    }
+
+
+
 
     //Drawer
     public static void openDrawer(DrawerLayout drawerLayout){
@@ -163,15 +181,18 @@ public class NursePreConsultation extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
+
     public static void redirectActivity(Activity activity, Class secondActivity){
         Intent intent = new Intent(activity, secondActivity);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
         activity.finish();
     }
+
     @Override
     protected void onPause(){
         super.onPause();
         closeDrawer(drawerLayout);
+
     }
 }

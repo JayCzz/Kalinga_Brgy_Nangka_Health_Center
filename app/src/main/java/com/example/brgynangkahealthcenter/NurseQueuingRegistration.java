@@ -10,10 +10,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,14 +20,13 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-
-public class NurseProfile extends AppCompatActivity {
+public class NurseQueuingRegistration extends AppCompatActivity {
 
     //NAV BAR
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button  viewProfile, viewprofile;
+    Button viewProfile;
 
     //SWITCH MODE
     SwitchCompat switchMode;
@@ -40,13 +37,13 @@ public class NurseProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nurse_profile);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_nurse_queuing_registration);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
+
 
         //Drawer
         drawerLayout = findViewById(R.id.drawerLayout);
-
         //Nav Bar
         //view Profile
         viewProfile = findViewById(R.id.viewProfile);
@@ -57,7 +54,6 @@ public class NurseProfile extends AppCompatActivity {
         inventory = findViewById(R.id.inventory);
         contactUs = findViewById(R.id.contactUs);
         exit = findViewById(R.id.exit);
-
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);
 
@@ -85,14 +81,12 @@ public class NurseProfile extends AppCompatActivity {
             }
         });
 
-        //Nav Bar
 
-        //view Profile
+        // Nav Bar
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseProfile.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NurseQueuingRegistration.this, NurseProfilePi.class); startActivity(i);}
         });
 
-        //Nav Bar
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,37 +96,37 @@ public class NurseProfile extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NurseProfile.this, NurseHome.class);
+                redirectActivity(NurseQueuingRegistration.this, NurseHome.class);
             }
 
         });
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NurseProfile.this, NurseDashboard.class);
+                redirectActivity(NurseQueuingRegistration.this, NurseDashboard.class);
             }
         });
         users.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                redirectActivity(NurseProfile.this, NurseUsers.class);
+                redirectActivity(NurseQueuingRegistration.this, NurseUsers.class);
             }
         });
         inventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NurseProfile.this, NurseInventory.class);
+                redirectActivity(NurseQueuingRegistration.this, NurseInventory.class);
             }
         });
         contactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(NurseProfile.this, NursePreConsultation.class);
+                redirectActivity(NurseQueuingRegistration.this, NursePreConsultation.class);
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(NurseProfile.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NurseQueuingRegistration.this, "Logout", Toast.LENGTH_SHORT).show();
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
@@ -144,10 +138,9 @@ public class NurseProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
-    //Drawer
+
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
     }
@@ -168,6 +161,5 @@ public class NurseProfile extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         closeDrawer(drawerLayout);
-
     }
 }

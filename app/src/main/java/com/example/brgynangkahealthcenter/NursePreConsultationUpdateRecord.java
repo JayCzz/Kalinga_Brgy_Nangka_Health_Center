@@ -101,7 +101,7 @@ public class NursePreConsultationUpdateRecord extends AppCompatActivity {
 
         //view Profile
         viewProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NursePreConsultationUpdateRecord.this, NurseProfile.class); startActivity(i);}
+            @Override public void onClick(View view) { Intent i = new Intent(NursePreConsultationUpdateRecord.this, NurseProfilePi.class); startActivity(i);}
         });
 
         //Nav Bar

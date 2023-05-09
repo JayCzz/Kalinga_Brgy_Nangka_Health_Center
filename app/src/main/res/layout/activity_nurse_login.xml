@@ -44,7 +44,6 @@
                 android:background="@drawable/custom_edittext"
                 android:fontFamily="@font/poppins"
                 android:hint="Username"
-                android:padding="8dp"
                 android:paddingStart="15dp"
                 style="@style/TexColor"
                 android:textColorHighlight="@color/cardview_dark_background"
