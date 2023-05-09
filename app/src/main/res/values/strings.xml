@@ -3,4 +3,6 @@
     <string name="select">Sex</string>
     <string name="back"><![CDATA[<-]]></string>
     <string name="next"><![CDATA[->]]></string>
+    <string name="fn_01001">FN-01001</string>
+    <string name="natsu_dragneel">Natsu Dragneel</string>
 </resources>

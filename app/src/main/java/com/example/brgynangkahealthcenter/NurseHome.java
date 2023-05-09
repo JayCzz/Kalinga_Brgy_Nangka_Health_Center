@@ -70,9 +70,7 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
 
         //QUEUING MONITORING
         queuingMonitoring = findViewById(R.id.queuingMonitor);
-        queuingMonitoring.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseHomeQueuingMonitor.class); startActivity(i);}
-        });
+        queuingMonitoring.setOnClickListener(view -> { Intent i = new Intent(NurseHome.this, NurseHomeQueuingMonitor.class); startActivity(i);});
         //QUEUING REGISTRATION
         queueRegister = findViewById(R.id.queueingRegistration);
         queueRegister.setOnClickListener(new View.OnClickListener() {
