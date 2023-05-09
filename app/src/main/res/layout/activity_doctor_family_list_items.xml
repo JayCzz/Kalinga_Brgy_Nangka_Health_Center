@@ -70,10 +70,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                android:drawableStart="@drawable/baseline_visibility_25"
+                android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
                 android:text="View Records"
-                android:textColor="#263238" />
+               />
 
         </LinearLayout>
 

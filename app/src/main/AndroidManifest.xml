@@ -54,15 +54,6 @@
             android:name=".NursePreConsultationUpdateRecord"
             android:exported="false" />
         <activity
-            android:name=".Citizen_Profile_Item3"
-            android:exported="false" />
-        <activity
-            android:name=".Citizen_Profile_Item2"
-            android:exported="false" />
-        <activity
-            android:name=".Citizen_Profile_Item"
-            android:exported="false" />
-        <activity
             android:name=".Nurse_QR_Generator"
             android:exported="false" />
         <activity
@@ -89,9 +80,6 @@
             android:exported="false" />
         <activity
             android:name=".DoctorConsultation"
-            android:exported="false" />
-        <activity
-            android:name=".DoctorConsultationForm"
             android:exported="false" />
         <activity
             android:name=".DoctorHome"
