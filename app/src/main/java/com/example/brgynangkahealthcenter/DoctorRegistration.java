@@ -136,7 +136,7 @@ public class DoctorRegistration extends AppCompatActivity {
                 return;
             }
 
-            DoctorClass doctorClass = new  DoctorClass(firstname,  lastname, birthday,  sex, IDNumber, email,  phone, username, password, confirm_password);
+            DoctorClass doctorClass = new  DoctorClass(firstname,  lastname, birthday, sex, IDNumber, age, email,  phone, username, password, confirm_password);
             reference.child(username).setValue(doctorClass);
 
             Toast.makeText(DoctorRegistration.this, "Signup Successfully!", Toast.LENGTH_SHORT).show();

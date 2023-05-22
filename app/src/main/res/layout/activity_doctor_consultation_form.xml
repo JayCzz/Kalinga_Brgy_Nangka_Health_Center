@@ -313,7 +313,7 @@
                             android:layout_height="60dp"
                             style="@style/BtnTexColor"
                             android:backgroundTint="@color/pink"
-                            android:text="Add Prescription"
+                            android:text="Confirm"
                             android:textSize="12sp" />
 
                     </LinearLayout>

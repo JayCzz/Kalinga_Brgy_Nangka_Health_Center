@@ -42,11 +42,7 @@ public class DoctorConsultation extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_doctor_consultation);
 
-
-
-        //View Record
-        viewRecord = findViewById(R.id.viewRecord);
-
+        ;
         //Drawer
         drawerLayout = findViewById(R.id.drawerLayout);
         //view Profile
@@ -61,10 +57,10 @@ public class DoctorConsultation extends AppCompatActivity {
         inventory = findViewById(R.id.inventory);
         exit = findViewById(R.id.exit);
 
-        //view Record
+        //View Record
+        viewRecord = findViewById(R.id.viewRecord);
         viewRecord.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) { Intent i = new Intent(DoctorConsultation.this,DoctorConsultationForm.class); startActivity(i);}
-
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorConsultation.this, DoctorConsultationViewRecords.class); startActivity(i);}
         });
 
         //SWITCH MODE

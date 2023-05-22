@@ -248,7 +248,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/pink"
-                                        android:text="View Users List"
+                                        android:text="View User List"
                                         style="@style/BtnTexColor"
                                         android:textSize="12sp"/>
 
@@ -325,11 +325,12 @@
 
 
                                     <Button
+                                        android:id="@+id/viewAdmin"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/pink"
                                         style="@style/BtnTexColor"
-                                        android:text="View Admins List"
+                                        android:text="View Admin List"
                                         android:textSize="12sp"/>
 
                                 </LinearLayout>
@@ -398,10 +399,11 @@
 
 
                                     <Button
+                                        android:id="@+id/viewDoctor"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/pink"
-                                        android:text="View Doctors List"
+                                        android:text="View Doctor List"
                                         style="@style/BtnTexColor"
                                         android:textSize="12sp"/>
 
@@ -479,10 +481,11 @@
 
 
                                     <Button
+                                        android:id="@+id/viewNurse"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/pink"
-                                        android:text="View Nurses List"
+                                        android:text="View Nurse List"
                                         style="@style/BtnTexColor"
                                         android:textSize="12sp"/>
 

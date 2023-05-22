@@ -93,7 +93,7 @@ public class DoctorHomeQueuingRegistration extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(DoctorHomeQueuingRegistration.this, DoctorHomeQueuingMonitor.class);
+                redirectActivity(DoctorHomeQueuingRegistration.this, DoctorHome.class);
             }
         });
 

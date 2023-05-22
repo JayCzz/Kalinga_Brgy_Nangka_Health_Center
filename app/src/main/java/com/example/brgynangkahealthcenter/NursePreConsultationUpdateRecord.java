@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,11 +16,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Calendar;
 
 public class NursePreConsultationUpdateRecord extends AppCompatActivity {
 
@@ -34,6 +38,9 @@ public class NursePreConsultationUpdateRecord extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
+    //CALENDAR
+    EditText updateDateToday;
+    private DatePickerDialog picker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,20 @@ public class NursePreConsultationUpdateRecord extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_nurse_pre_consultation_update_records);
+
+        //CALENDAR
+        updateDateToday = findViewById(R.id.dateToday);
+
+        updateDateToday.setOnClickListener((View view) -> {
+            final Calendar calendar = Calendar.getInstance();
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            int year = calendar.get(Calendar.YEAR);
+
+            //Date Picker Dialog
+            picker = new DatePickerDialog(NursePreConsultationUpdateRecord.this, (datePicker, year1, month1, dayofMonth) -> updateDateToday.setText(dayofMonth + "/" + (month1 + 1)+"/"+ year1), year, month, day);
+            picker.show();
+        });
 
         //Drawer
         drawerLayout = findViewById(R.id.drawerLayout);

@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,10 +28,15 @@ public class NurseProfileAi extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button viewProfile, viewprofile;
+    Button viewProfile;
 
     //PROFILE ITEMS
     ImageButton preConsult;
+
+    //FETCHING DATA INFORMATION IN PROFILE
+    TextView profileUsername, profileEmail, profilePhone, profilePassword;
+    TextView titleFirstname, titleLastname, titleID;
+
 
     //SWITCH MODE
     SwitchCompat switchMode;
@@ -59,7 +65,17 @@ public class NurseProfileAi extends AppCompatActivity {
         contactUs = findViewById(R.id.contactUs);
         exit = findViewById(R.id.exit);
 
+        //FETCHING DATA INFORMATION IN PROFILE
 
+        profileUsername = findViewById(R.id.profileUsername);
+        profileEmail = findViewById(R.id.profileEmail);
+        profilePhone = findViewById(R.id.profilePhone);
+        profilePassword = findViewById(R.id.profilePassword);
+
+        titleFirstname = findViewById(R.id.profileFirstname);
+        titleLastname = findViewById(R.id.profileLastname);
+        titleID = findViewById(R.id.profileID);
+        showUserData();
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);
@@ -155,14 +171,32 @@ public class NurseProfileAi extends AppCompatActivity {
     public void opencitizen_profile_pi(View view) {
         startActivity(new Intent(this,NurseProfilePi.class));
 
-
     }
-
-
-
     public void opencitizen_profile_ai(View view) {
         startActivity(new Intent(this,NurseProfileAi.class));
+    }
 
+    //FETCHING DATA INFORMATION IN PROFILE
+    public void showUserData(){
+        Intent intent = getIntent();
+
+        String userNameUser = intent.getStringExtra("username");
+        String emailUser = intent.getStringExtra("email");
+        String phoneUser = intent.getStringExtra("phone");
+        String passwordUser = intent.getStringExtra("password");
+
+        String firstnameUser = intent.getStringExtra("firstname");
+        String lastnameUser = intent.getStringExtra("lastname");
+        String idUser = intent.getStringExtra("IDNumber");
+
+        titleFirstname.setText(firstnameUser);
+        titleLastname.setText(lastnameUser);
+        titleID.setText(idUser);
+
+        profileUsername.setText(userNameUser);
+        profileEmail.setText(emailUser);
+        profilePhone.setText(phoneUser);
+        profilePassword.setText(passwordUser);
 
     }
 

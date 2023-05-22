@@ -78,10 +78,10 @@
 
             <Button
                 android:id="@+id/addPrescription"
+                style="@style/BtnTexColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
-                style="@style/BtnTexColor"
                 android:drawableLeft="@drawable/baseline_visibility_25"
                 android:fontFamily="@font/poppins"
                 android:text="View Information" />
@@ -155,7 +155,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/addPrescription"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
@@ -233,7 +233,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/addPrescription"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
@@ -311,7 +311,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/addPrescription"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"

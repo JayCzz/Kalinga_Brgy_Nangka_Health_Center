@@ -1,5 +1,8 @@
 package com.example.brgynangkahealthcenter;
 
+import static com.example.brgynangkahealthcenter.NurseHomeCalendarUtils.daysInMonthArray;
+import static com.example.brgynangkahealthcenter.NurseHomeCalendarUtils.monthYearFromDate;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
@@ -26,11 +29,9 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter.OnItemListener {
+public class NurseHome extends AppCompatActivity implements NurseHomeCalendarAdapter.OnItemListener {
 
     DrawerLayout drawerLayout;
     ImageView menu;
@@ -38,12 +39,11 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
     Button viewProfile;
 
     //HOME MODULES
-    Button scan_button, gen_button, queueRegister, viewLists, queuingMonitoring;
+    Button scan_button, gen_button, queueRegister, viewLists, queuingMonitoring, viewCounter;
 
     //CALENDAR
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
-    private LocalDate selectedDate;
 
     //SWITCH MODE
     SwitchCompat switchMode;
@@ -63,10 +63,10 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
 
         //CALENDAR
         initWidgets();
-        selectedDate = LocalDate.now();
+        NurseHomeCalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
 
-        //DASHBOARD LIST DIRECTORY
+        //HOME LIST DIRECTORY
 
         //QUEUING MONITORING
         queuingMonitoring = findViewById(R.id.queuingMonitor);
@@ -85,6 +85,7 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
             @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, Nurse_QR_Scanner.class); startActivity(i);}
 
         });
+
         //QR GENERATOR
         gen_button = findViewById(R.id.gen_btn);
         gen_button.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +97,13 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
         //VIEW LISTS
         viewLists.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseQRList.class); startActivity(i);}
+
+        });
+
+        viewCounter = findViewById(R.id.viewCounter);
+        //VIEW LISTS
+        viewCounter.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseHome.this, NurseHomeCounter.class); startActivity(i);}
 
         });
 
@@ -207,72 +215,46 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
         monthYearText = findViewById(R.id.monthYearTV);
     }
 
+    // WEEKLY CALENDAR
+
     private void setMonthView()
     {
-        monthYearText.setText(monthYearFromDate(selectedDate));
-        ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
+        monthYearText.setText(monthYearFromDate(NurseHomeCalendarUtils.selectedDate));
+        ArrayList<LocalDate> daysInMonth = daysInMonthArray(NurseHomeCalendarUtils.selectedDate);
 
-        NurseCalendarAdapter calendarAdapter = new NurseCalendarAdapter(daysInMonth, this);
+        NurseHomeCalendarAdapter calendarAdapter = new NurseHomeCalendarAdapter(daysInMonth, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
-
-    }
-
-    @SuppressLint("NewApi")
-    private ArrayList<String> daysInMonthArray(LocalDate date)
-    {
-        ArrayList<String> daysInMonthArray = new ArrayList<>();
-        YearMonth yearMonth = YearMonth.from(date);
-
-        int daysInMonth = yearMonth.lengthOfMonth();
-
-        LocalDate firstOfMonth = selectedDate.withDayOfMonth(1);
-        int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
-
-        for(int i = 1; i <= 42; i++)
-        {
-            if(i <= dayOfWeek || i > daysInMonth + dayOfWeek)
-            {
-                daysInMonthArray.add("");
-            }
-            else
-            {
-                daysInMonthArray.add(String.valueOf(i - dayOfWeek));
-            }
-        }
-        return  daysInMonthArray;
-    }
-
-    @SuppressLint("NewApi")
-    private String monthYearFromDate(LocalDate date)
-    {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
-        return date.format(formatter);
     }
 
     @SuppressLint("NewApi")
     public void previousMonthAction(View view)
     {
-        selectedDate = selectedDate.minusMonths(1);
+        NurseHomeCalendarUtils.selectedDate = NurseHomeCalendarUtils.selectedDate.minusMonths(1);
         setMonthView();
     }
 
     @SuppressLint("NewApi")
     public void nextMonthAction(View view)
     {
-        selectedDate = selectedDate.plusMonths(1);
+        NurseHomeCalendarUtils.selectedDate = NurseHomeCalendarUtils.selectedDate.plusMonths(1);
         setMonthView();
     }
 
     @Override
-    public void onItemClick(int position, String dayText)
+    public void onItemClick(int position, LocalDate date)
     {
-        if(!dayText.equals(""))
+        if(date != null)
         {
-            String message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate);
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            NurseHomeCalendarUtils.selectedDate = date;
+            setMonthView();
         }
+    }
+
+    public void weeklyAction(View view)
+    {
+        startActivity(new Intent(this, NurseWeeklyViewActivity.class));
     }
 
 
@@ -299,4 +281,8 @@ public class NurseHome extends AppCompatActivity implements NurseCalendarAdapter
         closeDrawer(drawerLayout);
     }
 
+    @Override
+    public void onItemClick(int position, String dayText) {
+
+    }
 }

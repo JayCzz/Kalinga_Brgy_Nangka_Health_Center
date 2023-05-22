@@ -18,11 +18,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,6 +37,7 @@ public class NurseRegistration extends AppCompatActivity {
     private DatePickerDialog picker;
     Button signupButton;
     FirebaseDatabase database;
+    FirebaseAuth Auth;
     DatabaseReference reference;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -49,6 +50,8 @@ public class NurseRegistration extends AppCompatActivity {
         setContentView(R.layout.activity_nurse_registration);
 
 
+        // REGISTER
+        Auth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         signupFirstname = findViewById(R.id.firstname);
         signupLastname = findViewById(R.id.lastname);
@@ -121,7 +124,7 @@ public class NurseRegistration extends AppCompatActivity {
             }
 
             radioButtonRegisterGenderSelected = findViewById(selectedGenderId);
-            String gender = radioButtonRegisterGenderSelected.getText().toString();
+            String sex = radioButtonRegisterGenderSelected.getText().toString();
 
             // Validate if the password and confirm password fields match
             if (!password.equals(confirm_password)) {
@@ -141,8 +144,11 @@ public class NurseRegistration extends AppCompatActivity {
                 return;
             }
 
-            NurseClass nurseClass = new  NurseClass(firstname,  lastname, birthday,  gender, IDNumber, email,  phone, username, password, confirm_password);
+            NurseClass nurseClass = new  NurseClass(firstname,  lastname, birthday, sex, IDNumber, age, email,  phone, username, password, confirm_password);
             reference.child(username).setValue(nurseClass);
+
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+
 
             Toast.makeText(NurseRegistration.this, "Signup Successfully!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(NurseRegistration.this, NurseLogin.class);

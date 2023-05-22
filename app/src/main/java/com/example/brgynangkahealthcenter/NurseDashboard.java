@@ -26,7 +26,7 @@ public class NurseDashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button viewProfile, viewprofile, listfamily, viewUsers;
+    Button viewProfile, viewprofile, listfamily, viewUsers, viewAdmin, viewDoctor, viewNurse;
 
     //SWITCH MODE
     SwitchCompat switchMode;
@@ -66,7 +66,19 @@ public class NurseDashboard extends AppCompatActivity {
         viewUsers.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseUsers .class); startActivity(i);}
         });
+        viewAdmin = findViewById(R.id.viewAdmin);
+        viewAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseAdminList .class); startActivity(i);}
+        });
+        viewDoctor = findViewById(R.id.viewDoctor);
+        viewDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseDoctorList .class); startActivity(i);}
+        });
 
+        viewNurse = findViewById(R.id.viewNurse);
+        viewNurse.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(NurseDashboard.this, NurseNurseList .class); startActivity(i);}
+        });
 
 
         //SWITCH MODE

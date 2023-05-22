@@ -35,7 +35,7 @@ public class DoctorDashboard extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
     //DASH BOARD MODULE
-    Button viewprofile, listfamily, viewUsers;
+    Button viewprofile, listfamily, viewUsers,  viewAdmin, viewDoctor, viewNurse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,20 @@ public class DoctorDashboard extends AppCompatActivity {
         viewUsers = findViewById(R.id.viewUsers);
         viewUsers.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, DoctorUsers .class); startActivity(i);}
+        });
+
+        viewAdmin = findViewById(R.id.viewAdmin);
+        viewAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, Doctor_Dashboard_Admin_List.class); startActivity(i);}
+        });
+        viewDoctor = findViewById(R.id.viewDoctor);
+        viewDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, Doctor_Dashboard_Doctor_List .class); startActivity(i);}
+        });
+
+        viewNurse = findViewById(R.id.viewNurse);
+        viewNurse.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) { Intent i = new Intent(DoctorDashboard.this, Doctor_Dashboard_Nurse_List.class); startActivity(i);}
         });
 
         //SWITCH MODE

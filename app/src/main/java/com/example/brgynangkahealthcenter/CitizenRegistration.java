@@ -148,7 +148,7 @@ public class CitizenRegistration extends AppCompatActivity {
                     return;
                 }
 
-                HelperClass helperClass = new HelperClass(firstname, lastname, birthday, gender, familynumber, email, phone, username, password, confirm_password);
+                HelperClass helperClass = new HelperClass(firstname, lastname, birthday, gender, familynumber, age, email, phone, username, password, confirm_password);
                 reference.child(username).setValue(helperClass);
 
                 Toast.makeText(CitizenRegistration.this, "Signup Successfully!", Toast.LENGTH_SHORT).show();

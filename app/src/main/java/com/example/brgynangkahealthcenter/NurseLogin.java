@@ -135,29 +135,55 @@ public class NurseLogin extends AppCompatActivity {
     public void checkUser(){
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Nurse");
         Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
+
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     loginUsername.setError(null);
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+
                     if (passwordFromDB.equals(userPassword)) {
                         loginUsername.setError(null);
 
-                        String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
+
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
 
-                        Intent intent = new Intent(NurseLogin.this, NurseHome.class);
+                        String firstnameFromDB = snapshot.child(userUsername).child("firstname").getValue(String.class);
+                        String lastnameFromDB = snapshot.child(userUsername).child("lastname").getValue(String.class);
+                        String birthdayFromDB = snapshot.child(userUsername).child("birthday").getValue(String.class);
+                        String ageFromDB = snapshot.child(userUsername).child("age").getValue(String.class);
+                        String sexFromDB = snapshot.child(userUsername).child("sex").getValue(String.class);
+                        String IDNumberFromDB = snapshot.child(userUsername).child("IDNumber").getValue(String.class);
+                        String phoneFromDB = snapshot.child(userUsername).child("phone").getValue(String.class);
 
-                        intent.putExtra("name", nameFromDB);
-                        intent.putExtra("email", emailFromDB);
+                        Intent intent = new Intent(NurseLogin.this, NurseProfilePi.class);
+
+                        intent.putExtra("firstname", firstnameFromDB);
+                        intent.putExtra("lastname", lastnameFromDB);
+                        intent.putExtra("IDNumber", IDNumberFromDB);
+
+                        intent.putExtra("birthday", birthdayFromDB);
+                        intent.putExtra("age", ageFromDB);
+                        intent.putExtra("sex", sexFromDB);
+                        startActivity(intent);
+
+                        intent = new Intent(NurseLogin.this, NurseProfileAi.class);
+
+                        intent.putExtra("firstname", firstnameFromDB);
+                        intent.putExtra("lastname", lastnameFromDB);
+                        intent.putExtra("IDNumber", IDNumberFromDB);
+
                         intent.putExtra("username", usernameFromDB);
+                        intent.putExtra("email", emailFromDB);
+                        intent.putExtra("phone", phoneFromDB);
                         intent.putExtra("password", passwordFromDB);
 
-                        startActivity(intent);
+
                     } else {
                         loginPassword.setError("Invalid Password Incorrect");
                         loginPassword.requestFocus();

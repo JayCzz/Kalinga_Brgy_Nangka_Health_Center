@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,16 +30,21 @@ public class NurseProfilePi extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, dashboard, users, inventory, contactUs, exit;
-    Button  viewProfile, viewprofile;
+    Button  viewProfile;
 
     //PROFILE ITEMS
     ImageButton preConsult;
+
+    //FETCHING DATA INFORMATION IN PROFILE
+    TextView  profileBirthday, profileAge, profileSex;
+    TextView  titleFirstname,titleLastname, titleID;
 
     //SWITCH MODE
     SwitchCompat switchMode;
     boolean nightMode;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
@@ -62,7 +68,15 @@ public class NurseProfilePi extends AppCompatActivity {
         contactUs = findViewById(R.id.contactUs);
         exit = findViewById(R.id.exit);
 
+        //FETCHING DATA INFORMATION IN PROFILE
+        profileBirthday = findViewById(R.id.profileBirthday);
+        profileAge = findViewById(R.id.profileAge);
+        profileSex = findViewById(R.id.profileSex);
 
+        titleFirstname = findViewById(R.id.profileFirstname);
+        titleLastname = findViewById(R.id.profileLastname);
+        titleID = findViewById(R.id.profileID);
+        loadUserData();
 
         //SWITCH MODE
         switchMode = findViewById(R.id.switchMode);
@@ -157,8 +171,6 @@ public class NurseProfilePi extends AppCompatActivity {
 
     public void opencitizen_profile_pi(View view) {
         startActivity(new Intent(this,NurseProfilePi.class));
-
-
     }
 
 
@@ -166,10 +178,29 @@ public class NurseProfilePi extends AppCompatActivity {
     public void opencitizen_profile_ai(View view) {
         startActivity(new Intent(this,NurseProfileAi.class));
 
-
     }
 
+    //FETCHING DATA INFORMATION IN PROFILE
+    public void loadUserData(){
 
+        Intent intent = getIntent();
+
+        String birthdayUser = intent.getStringExtra("birthday");
+        String ageUser = intent.getStringExtra("age");
+        String sexUser = intent.getStringExtra("sex");
+        String firstnameUser = intent.getStringExtra("firstname");
+        String lastnameUser = intent.getStringExtra("lastname");
+        String idUser = intent.getStringExtra("IDNumber");
+
+        titleFirstname.setText(firstnameUser);
+        titleLastname.setText(lastnameUser);
+        titleID.setText(idUser);
+
+        profileBirthday.setText(birthdayUser);
+        profileAge.setText(ageUser);
+        profileSex.setText(sexUser);
+
+    }
 
 
     //Drawer

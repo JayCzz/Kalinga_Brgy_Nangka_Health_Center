@@ -72,28 +72,62 @@
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <TextView
-                                    android:id="@+id/Username"
+                                <TableRow
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="50dp"
-                                    android:fontFamily="@font/poppins"
-                                    android:text="Username"
-                                    style="@style/TexColor"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold" />
+
+                                    android:layout_marginTop="50dp">
+
+                                    <TextView
+                                        android:id="@+id/profileFirstname"
+                                        android:layout_gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="First Name"
+                                        style="@style/TexColor"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/profileLastname"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="LastName"
+                                        style="@style/TexColor"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"
+                                        />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/titlebrgyId"
+                                    android:id="@+id/Id"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/poppins"
-                                    android:text="FN-01001"
+                                    android:text="ID :"
                                     style="@style/TexColor"
                                     android:textSize="12sp" />
 
+                                    <TextView
+                                        android:id="@+id/profileID"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/poppins"
+                                        android:text="id"
+                                        style="@style/TexColor"
+                                        android:textSize="12sp" />
+                                </TableRow>
 
                                 <View
                                     android:layout_width="300dp"
@@ -136,7 +170,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:textColor="@color/white"
-                                                android:textSize="10dp"
+                                                android:textSize="13dp"
                                                 android:text="Personal Info"
                                                 android:gravity="center"
                                                 android:layout_marginTop="75dp"
@@ -170,7 +204,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:textColor="@color/white"
-                                                android:textSize="10dp"
+                                                android:textSize="13dp"
                                                 android:text="Account Info"
                                                 android:gravity="center"
                                                 android:layout_marginTop="75dp"
@@ -198,7 +232,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
-
+                                            android:id="@+id/birth"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -209,7 +243,7 @@
                                             android:textStyle="bold" />
 
                                         <TextView
-
+                                            android:id="@+id/profileBirthday"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="8dp"
@@ -236,7 +270,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
-
+                                            android:id="@+id/age"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -247,7 +281,7 @@
                                             android:textStyle="bold" />
 
                                         <TextView
-
+                                            android:id="@+id/profileAge"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="8dp"
@@ -274,7 +308,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
-
+                                            android:id="@+id/sex"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
@@ -285,7 +319,7 @@
                                             android:textStyle="bold" />
 
                                         <TextView
-
+                                            android:id="@+id/profileSex"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="8dp"

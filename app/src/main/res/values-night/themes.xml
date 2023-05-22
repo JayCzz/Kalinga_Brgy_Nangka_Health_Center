@@ -27,4 +27,7 @@
     //SearchBar
     <style name="CardBackground2"><item name="android:background">@color/light_gray</item></style>
     <style name="CardBackground3"><item name="android:background">@color/lightgray</item></style>
+
+    //TeXtBackground
+    <style name="CardBackground4"><item name="android:background">@color/lightgray</item></style>
 </resources>

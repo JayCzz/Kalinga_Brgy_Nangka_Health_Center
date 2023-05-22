@@ -325,6 +325,7 @@
 
 
                                 <Button
+                                    android:id="@+id/viewAdmin"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
@@ -398,6 +399,7 @@
 
 
                                 <Button
+                                    android:id="@+id/viewDoctor"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"
@@ -479,6 +481,7 @@
 
 
                                 <Button
+                                    android:id="@+id/viewNurse"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/pink"

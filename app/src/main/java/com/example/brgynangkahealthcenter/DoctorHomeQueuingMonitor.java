@@ -95,7 +95,7 @@ public class DoctorHomeQueuingMonitor extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                redirectActivity(DoctorHomeQueuingMonitor.this, DoctorHomeQueuingMonitor.class);
+                redirectActivity(DoctorHomeQueuingMonitor.this, DoctorHome.class);
             }
         });
 

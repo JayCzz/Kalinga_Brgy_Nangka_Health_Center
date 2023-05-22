@@ -217,11 +217,12 @@
                     style="@style/TexColor"/>
 
                 <EditText
+                    android:id="@+id/dateToday"
                     android:layout_width="320dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/custom_box_edittext"
                     android:drawablePadding="8dp"
-                    android:hint="mm/dd/yy"
+                    android:hint="dd/mm/yy"
                     android:textSize="16sp"
                     android:padding="12dp"
                     style="@style/TexColor"

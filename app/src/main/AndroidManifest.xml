@@ -15,6 +15,36 @@
         android:theme="@style/Theme.BrgyNangkaHealthCenter"
         tools:targetApi="31">
         <activity
+            android:name=".NurseHomeCounter"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor_Dashboard_Nurse_List"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor_Dashboard_Doctor_List"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor_Dashboard_Admin_List"
+            android:exported="false" />
+        <activity
+            android:name=".NurseNurseList"
+            android:exported="false" />
+        <activity
+            android:name=".NurseDoctorList"
+            android:exported="false" />
+        <activity
+            android:name=".NurseAdminList"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorConsultationViewRecords"
+            android:exported="false" />
+        <activity
+            android:name=".NurseHomeCalendarEventEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NurseWeeklyViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".DoctorProfileAi"
             android:exported="false" />
         <activity

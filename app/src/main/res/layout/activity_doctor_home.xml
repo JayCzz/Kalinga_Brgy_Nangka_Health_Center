@@ -27,6 +27,8 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+
+
                     <TextView
                         style="@style/TexColor"
                         android:layout_width="wrap_content"
@@ -38,7 +40,7 @@
                         android:textSize="20sp" />
 
                     <View
-                        android:layout_width="320dp"
+                        android:layout_width="380dp"
                         android:layout_height="1dp"
                         android:layout_gravity="center"
                         android:background="@color/pink" />
@@ -237,11 +239,11 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Calender"
+                        android:text="Calendar"
                         android:textSize="20sp" />
 
                     <View
-                        android:layout_width="380dp"
+                        android:layout_width="320dp"
                         android:layout_height="1dp"
                         android:layout_gravity="center"
                         android:background="@color/pink" />
@@ -249,10 +251,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="12dp"
-                        android:layout_marginEnd="10dp">
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
@@ -262,36 +264,153 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="60dp"
-                                    android:layout_height="60dp"
-                                    android:layout_marginTop="20dp"
-                                    android:src="@drawable/calendar_home" />
-
-                                <TextView
-                                    style="@style/TexColor"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Calender" />
+                                android:layout_height="500dp"
+                                style="@style/CardBackground"
+                                android:orientation="vertical"
+                                android:gravity="center">
 
                                 <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Weekly"
+                                    style="@style/TexColor"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:textStyle="bold"
+                                    android:onClick="weeklyAction"
+                                    android:textSize="19sp"/>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="8dp"
-                                    android:backgroundTint="@color/pink"
-                                    style="@style/BtnTexColor"
-                                    android:text="View Calendar"
-                                    android:textSize="12sp" />
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="20dp">
+
+                                    <Button
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/back"
+                                        style="@style/TexColor"
+                                        android:background="?android:attr/selectableItemBackground"
+                                        android:textStyle="bold"
+                                        android:onClick="previousMonthAction"
+                                        android:textSize="20sp"/>
+
+                                    <TextView
+                                        android:id="@+id/monthYearTV"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="2"
+                                        android:layout_height="wrap_content"
+                                        android:text="June 2023"
+                                        style="@style/TexColor"
+                                        android:fontFamily="@font/poppins"
+                                        android:textSize="20sp"
+                                        android:textAlignment="center"/>
+
+                                    <Button
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/next"
+                                        style="@style/TexColor"
+                                        android:background="?android:attr/selectableItemBackground"
+                                        android:textStyle="bold"
+                                        android:onClick="nextMonthAction"
+                                        android:textSize="20sp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="SUN"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="MON"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="TUE"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="WED"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="THUR"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="FRI"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="SAT"
+                                        android:fontFamily="@font/poppins"
+                                        style="@style/TexColor"
+                                        android:textAlignment="center"
+                                        android:textSize="16sp"/>
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/calendarRecyclerView"
+                                    android:layout_width="match_parent"
+                                    style="@style/CardBackground"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"/>
 
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
 
                     <TextView
                         style="@style/TexColor"
@@ -313,6 +432,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -432,70 +552,7 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:elevation="0dp"
-                                app:cardCornerRadius="10dp">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center">
-
-                                    <LinearLayout
-                                        style="@style/CardBackground"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:layout_marginTop="20dp"
-                                            android:src="@drawable/counter_home" />
-
-                                        <TextView
-                                            style="@style/TexColor"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Counter" />
-
-
-                                        <Button
-                                            style="@style/BtnTexColor"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:backgroundTint="@color/pink"
-                                            android:text="Open Counter"
-                                            android:textSize="12sp" />
-
-                                    </LinearLayout>
-
-                                </RelativeLayout>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
 
 
                 </LinearLayout>
